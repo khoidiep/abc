@@ -7,8 +7,9 @@ export LANG=en.US.UTF-8
 export LANG=vi_VN.UTF-8
 
 LANG=en_US
+LANG=vi_VN
 
-zenity --info --text="This program shows timezone"
+zenity --info --text="This program shows timezone \n Chương trình sẽ hiện thời gian"
 
 language=$(zenity --entry --entry-text="Type" --text="Choose your language: Type 1 for English ;Type 2 for Vietnamese \n  Xin chọn ngôn ngữ 1 - Tiếng Anh 2 - Tiếng Việt Nam")
 if [ $language -eq 2 ]
