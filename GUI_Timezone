@@ -10,7 +10,7 @@ LANG=en_US
 
 zenity --info --text="This program shows timezone"
 
-language=$(zenity --entry --entry-text="Type" --text="Choose your language: Type 1 for English ;Type 2 for Vietnamese")
+language=$(zenity --entry --entry-text="Type" --text="Choose your language: Type 1 for English ;Type 2 for Vietnamese \n  fdngödfngdofsngdf")
 if [ $language -eq 2 ]
 then
 {
