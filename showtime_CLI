@@ -1,0 +1,13 @@
+#!/bin/sh
+clear
+echo "Hello!Good Morning"
+echo "This is the program to show current time and date"
+
+now=$(date +"%T")
+echo "Local Current time : $now"
+
+day=$(date +"%m-%d-%y")
+echo "Today is: $day"
+
+echo "Select your timezone"
+tzselect
