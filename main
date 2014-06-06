@@ -1,10 +1,5 @@
 #!/bin/sh
 
-#export LANG=en.US.UTF-8
-#read continent_city
-#set $continent_city
-#export TZ="$1"/"$2"
-#date
 
 
 export LANG=en.US.UTF-8
