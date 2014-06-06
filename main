@@ -1,7 +1,54 @@
 #!/bin/sh
 
+#export LANG=en.US.UTF-8
+#read continent_city
+#set $continent_city
+#export TZ="$1"/"$2"
+#date
+
+
 export LANG=en.US.UTF-8
-read continent_city
-set $continent_city
-export TZ="$1"/"$2"
+export LANG=vi_VN.UTF-8
+
+HOST=localhost
+PORT=1234
+
+FILE1=/tmp/main1
+FILE2=/tmp/main2
+
+main="nc $HOST $PORT"
+
+LANG=en_US
+LANG=vi_VN
+
+zenity --info --text="This program shows timezone \n Chương trình sẽ hiện thời gian"
+
+language=$(zenity --entry --entry-text="Type" --text="Choose your language: Type 1 for English ;Type 2 for Vietnamese \n Xin chọn ngôn ngữ 1 - Tiếng Anh 2 - Tiếng Việt Nam")
+if [ $language -eq 2 ]
+then
+{
+export LANG=vi_VN.UTF-8
+LANG=vi_VN
+
+continent=$(zenity --entry --entry-text="Type" --text="Nhập châu lục")
+city=$(zenity --entry --entry-text="Type" --text="Nhập tên thành phố")
+export TZ="$continent"/"$city"
 date
+output=$(date)
+zenity --info --text="$output"
+}
+
+elif [ $language -eq 1 ]
+then
+{
+export LANG=en_US.UTF-8
+LANG=en_US
+
+cont=$(zenity --entry --entry-text="Type" --text="Enter desired Continent")
+city=$(zenity --entry --entry-text="Type" --text="Enter desired City")
+export TZ="$cont"/"$city"
+op=$(date)
+zenity --info --text="$op"
+
+}
+fi
