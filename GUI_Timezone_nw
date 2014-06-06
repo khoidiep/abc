@@ -18,7 +18,7 @@ LANG=vi_VN
 zenity --info --text="This program shows timezone \n Chương trình sẽ hiện thời gian"
 
 language=$(zenity --entry --entry-text="Type" --text="Choose your language: Type 1 for English ;Type 2 for Vietnamese \n Xin chọn ngôn ngữ 1 - Tiếng Anh 2 - Tiếng Việt Nam")
-if [ $language -eq 2 ]
+if [ $language == 2 ]
 then
 {
 export LANG=vi_VN.UTF-8
@@ -32,7 +32,7 @@ output=$(date)
 zenity --info --text="$output"
 }
 
-elif [ $language -eq 1 ]
+elif [ $language == 1 ]
 then
 {
 export LANG=en_US.UTF-8
