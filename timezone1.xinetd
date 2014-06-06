@@ -1,12 +1,12 @@
 # default: on
 # description: Timezone server
 
-service main
+service GUI_Timezone_nw
 {
           flags = REUSE
           socket_type = stream
           wait = no
           user = nobody
-          server = /usr/local/bin/main
+          server = /usr/local/bin/GUI_Timezone_nw
           disable = no
 }
